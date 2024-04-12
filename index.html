@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script lang="javascript" src="codespace_api.js"></script>
+    <title>Vite + React</title>
+
+    <style>
+      canvas {
+        /* border: 1px solid #999999; */
+      }
+      button {
+        padding: 7px;
+        border-radius: 5px;
+      }
+      .vislabel img {
+        /* border: 1px solid #404040; */
+        margin-top: 1em;
+        margin-bottom: 1em;
+      }
+    </style>
+    <script lang="javascript" src="codespace_api.js"></script>
+    <script lang="javascript" src="audiovis.js"></script>
+  </head>
+  <body style="background-color: black; overflow: hidden;">
+    <div id="root"></div>
+    <div
+      style="
+        display: none;
+        margin: auto;
+        width: 100%;
+        border: 1px solid black;
+        text-align: center;
+      "
+    >
+      <audio id="audioSource" src="base.mp3" type="audio/mpeg" controls>
+        Your browser does not support the audio element.
+      </audio>
+      <br />
+
+      <br />
+    </div>
+    <!-- <button
+      style="width: 100%;"
+      onclick="window.postMessage(JSON.stringify({ action: 'init' }), '*');"
+    >
+      Start Visualization
+    </button> -->
+    <div
+      style="margin: auto; width: 100%; display: flex; justify-content: center;"
+    >
+      <div>
+        <canvas id="aCanvas" width="300" height="300"></canvas>
+      </div>
+    </div>
+  </body>
+</html>
