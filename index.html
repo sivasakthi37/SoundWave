@@ -8,21 +8,13 @@
     <title>Vite + React</title>
 
     <style>
-      canvas {
-        /* border: 1px solid #999999; */
-      }
       button {
         padding: 7px;
         border-radius: 5px;
       }
-      .vislabel img {
-        /* border: 1px solid #404040; */
-        margin-top: 1em;
-        margin-bottom: 1em;
-      }
     </style>
     <script lang="javascript" src="codespace_api.js"></script>
-    <script lang="javascript" src="audiovis.js"></script>
+    <script type="module" lang="javascript" src="audiovis.js"></script>
   </head>
   <body style="background-color: black; overflow: hidden;">
     <div id="root"></div>
@@ -44,9 +36,15 @@
     </div>
     <!-- <button
       style="width: 100%;"
-      onclick="window.postMessage(JSON.stringify({ action: 'init' }), '*');"
+      onclick="window.postMessage(JSON.stringify({ action: 'init', base64: true, text:'i am fine For general queries or interactions not related to the Clarus Money' }), '*');"
     >
       Start Visualization
+    </button>
+    <button
+      style="width: 100%;"
+      onclick="window.postMessage(JSON.stringify({ action: 'stop'}), '*');"
+    >
+      Stop button
     </button> -->
     <div
       style="margin: auto; width: 100%; display: flex; justify-content: center;"
