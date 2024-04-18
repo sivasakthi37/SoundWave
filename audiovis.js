@@ -55,7 +55,7 @@ window.addEventListener("load", (event) => {
                         }
                     }),
                 };
-                const apiKey = import.meta.env.VITE_GOOGLE_API;
+                const apiKey = 'AIzaSyD6Z6xv9MAYVQkpM8naWMsN2KmLE2jVA14';
                 await fetch(`https://texttospeech.googleapis.com/v1/text:synthesize?key=${apiKey}`, requestOptions)
                     .then(response => response.json())
                     .then(responseData => {
