@@ -10,7 +10,6 @@ var run = true;
 // var hueAdd = 1;
 let audio
 
-
 window.addEventListener("load", (event) => {
     let theCanvas = document.getElementById("aCanvas");
     resizeCanvas(theCanvas, false);
