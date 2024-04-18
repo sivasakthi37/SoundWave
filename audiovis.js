@@ -13,10 +13,12 @@ let audio
 window.addEventListener("load", (event) => {
     let theCanvas = document.getElementById("aCanvas");
     resizeCanvas(theCanvas, false);
-    theCanvas.width = 400
-    theCanvas.height = 400
-    width = 400;
-    height = 400;
+    // width = theCanvas.width;
+    // height = theCanvas.height;
+    theCanvas.width = 326
+    theCanvas.height = 344
+    width = 326;
+    height = 344;
 
     ctx = theCanvas.getContext("2d");
     // console.log('envvvvvvv', import.meta.env.VITE_GOOGLE_API)
