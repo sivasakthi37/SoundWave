@@ -89,6 +89,21 @@ async function generateAudio(base64) {
     audio.src = url;
     audio.load();
     audio.play();
+    // Add an event listener for the 'ended' event
+    function endedResponse() {
+        if (window.ReactNativeWebView) {
+            // console.log('window ended',);
+            console.log('ended response');
+            // @ts-ignore
+            window.ReactNativeWebView.postMessage(JSON.stringify({ action: 'audioEnded' }));
+        } else {
+            console.log('Post message in browser ');
+        }
+        audio.removeEventListener('ended', endedResponse);
+        // console.log("Playback has ended.");
+        // Perform any additional actions after the audio has ended
+    }
+    audio.addEventListener('ended', endedResponse);
     startVis(audio);
 }
 
@@ -158,7 +173,7 @@ function audioVisualize_3() {
         x = v * Math.cos(radian) + cX;
         y = v * Math.sin(radian) + cY;
 
-        console.log('x,y', x, y);
+        // console.log('x,y', x, y);
         ctx.lineTo(x, y);
         ctx.stroke();
 
